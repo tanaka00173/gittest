@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <title>安心安全評価｜中古モバイル査定システム</title>
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/styleseet.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/table.css">
+  <script type="text/javascript">
+    function showBalloon() {
+      var wObjballoon = document.getElementById("makeImg");
+      if (wObjballoon.className == "balloon-none") {
+        wObjballoon.className = "balloon";
+      } else {
+        wObjballoon.className = "balloon-none";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function checkForm($this) {
+      var str = $this.value;
+      while (str.match(/[^A-Z^a-z\d\-]/)) {
+        str = str.replace(/[^A-Z^a-z\d\-]/, "");
+      }
+      $this.value = str;
+    }
+  </script>
+</head>
+<body>
+  <header class="header-main">
+    <a href="2001.html" class="header-logo">
+      中古モバイル査定システム
+    </a>
+    <nav role="navigation">
+      <ul class="header-menu">
+        <li>
+          <a href="###">
+            田中優衣さん　こんにちは！<span>ユーザーコード：600020</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a class="logout" href="index.html"><i class="fas fa-sign-out-alt"></i>ログアウト</a>
+  </header>
+
+  <section class="container-main">
+
+    <aside class="sidebar-main">
+      <ul>
+        <li><a href="2001.html">ダッシュボード</a></li>
+        <li><a class="pickup" href="3001.html">買取査定</a></li>
+        <li><a href="4001.html">査定データ</a></li>
+        <li><a href="5001.html">FAQ</a></li>
+        <li><a href="6001.html">マスタ管理</a></li><br><br>
+        <div class="qr-appli">
+          <li class="appli">検査/データ消去アプリ</li>
+          <li class="appli">https://qwertyuiop.jp/</li>
+          <li class="appli"><img src="images/qrcode.png" alt=""></li>
+        </div>
+      </ul>
+
+      <footer class="footer-main">
+        <p>©株式会社クリエージェンシー</p>
+      </footer>
+    </aside>
+
+    <div class="contents">
+
+      <div class="balloon-none" id="makeImg">
+        <div class="error">
+          <p>未入力/未選択の項目があります。</p>
+        </div>
+      </div>
+
+      <h1>
+        安心安全評価
+      </h1>
+      <ul class="contents-breadcrumb">
+        <li>
+          <a href="2001.html">
+            <i class="fas fa-home"></i>
+            HOME&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3001.html">
+            <i class="fas fa-chevron-right"></i>
+            買取査定&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3002.html">
+            <i class="fas fa-chevron-right"></i>
+            端末情報&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3003.html">
+            <i class="fas fa-chevron-right"></i>
+            安心安全評価&ensp;
+          </a>
+        </li>
+
+      </ul>
+      <div class="container">
+        <h1>個体情報の入力</h1>
+
+        <div class="container-table">
+          <table class="table-result">
+            <tr>
+              <th rowspan="5">機能評価</th>
+              <td class="middle">モデル/型番/規格番号</th>
+              <td>
+                <p>MTE54J/A</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">商品名称</td>
+              <td><input type="text" placeholder="iPhone 8 256GB ゴールド">
+                <p>※商品名称が異なる場合は管理者にお問い合わせください。</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">IMEI/個体識別番号</th>
+              <td><input type="text" placeholder="半角英数字で入力してください。">
+              </td>
+            </tr>
+
+            <tr>
+              <td class="middle">ネットワーク利用制限</td>
+              <td>
+                <p>▼判定URL</p>
+                <a href="https://snowyskies.jp/imeiChecking/">https://snowyskies.jp/imeiChecking/</a>
+                <input type="text" placeholder="半角英数字で入力してください。">
+                <p>※該当が無い場合は管理者にお問い合わせください。</p>
+                <br>
+                <p>▼判定結果</p>
+                <div class="radiobtn">
+                  <label><input type="radio" name="result2" value="">-（ハイフン）</label> &ensp;
+                  <label><input type="radio" name="result2" value="">◯</label> &ensp;
+                  <label><input type="radio" name="result2" value="">△</label> &ensp;
+                  <label><input type="radio" name="result2" value="">×</label> &ensp;
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="middle">アクティベーションロック
+                <p class="attention">※iPhone/iPadのみ要確認</p>
+              </td>
+              <td>
+                <p>▼判定URL</p>
+                <a href="https://iunlocker.com/check_icloud.php">https://iunlocker.com/check_icloud.php</a>
+                <p class="Second-line">▼判定結果</p>
+                <div class="radiobtn">
+                  <label><input type="radio" name="result1" value="">OFF</label>
+                  <label><input type="radio" name="result1" value="">ONまたはUNKNOWN</label>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+        <div class="backpage_btn">
+          <a href="3002.html" class="btn-back">戻る</a>
+        </div>
+
+        <div class="container-login_btn">
+          <a href="###" class="btn-primary" onclick="showBalloon()">確認用：エラー</a>
+        </div>
+
+        <div class="nextpage_btn">
+          <a href="3004.html" class="btn-next">次へ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

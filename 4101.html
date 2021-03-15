@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <title>ダウンロード｜中古モバイル査定システム</title>
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/styleseet.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/table.css">
+
+  <!--link rel="stylesheet" href="css/main.css"-->
+  <script type="text/javascript">
+    function showBalloon() {
+      var wObjballoon = document.getElementById("makeImg");
+      if (wObjballoon.className == "balloon-none") {
+        wObjballoon.className = "balloon";
+      } else {
+        wObjballoon.className = "balloon-none";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function checkForm($this) {
+      var str = $this.value;
+      while (str.match(/[^A-Z^a-z\d\-]/)) {
+        str = str.replace(/[^A-Z^a-z\d\-]/, "");
+      }
+      $this.value = str;
+    }
+  </script>
+
+</head>
+<body>
+  <header class="header-main">
+    <a href="2001.html" class="header-logo">
+      中古モバイル査定システム
+    </a>
+    <nav role="navigation">
+      <ul class="header-menu">
+        <li>
+          <a href="###">
+            田中優衣さん　こんにちは！<span>ユーザーコード：600020</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a class="logout" href="index.html"><i class="fas fa-sign-out-alt"></i>ログアウト</a>
+  </header>
+
+
+  <section class="container-main">
+
+    <aside class="sidebar-main">
+      <ul>
+        <li><a href="2001.html">ダッシュボード</a></li>
+        <li><a href="3001.html">買取査定</a></li>
+        <li><a class="pickup" href="4001.html">査定データ</a></li>
+        <li><a href="5001.html">FAQ</a></li>
+        <li><a href="6001.html">マスタ管理</a></li><br><br>
+        <div class="qr-appli">
+          <li class="appli">検査/データ消去アプリ</li>
+          <li class="appli">https://qwertyuiop.jp/</li>
+          <li class="appli"><img src="images/qrcode.png" alt=""></li>
+        </div>
+      </ul>
+
+      <footer class="footer-main">
+        <p>©株式会社クリエージェンシー</p>
+      </footer>
+    </aside>
+
+    <div class="contents">
+
+      <div class="balloon-none" id="makeImg">
+        <div class="error">
+          <p>該当する査定データはありません。</p>
+        </div>
+      </div>
+
+      <h1>
+        買取査定
+      </h1>
+      <ul class="contents-breadcrumb">
+        <li>
+          <a href="2001.html">
+            <i class="fas fa-home"></i>
+            HOME&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="4001.html">
+            <i class="fas fa-chevron-right"></i>
+            査定データ&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="4101.html">
+            <i class="fas fa-chevron-right"></i>
+            ダウンロード&ensp;
+          </a>
+        </li>
+      </ul>
+      <div class="container">
+        <h1>DL条件入力</h1>
+
+        <div class="container-table">
+          <table class="table-download">
+            <tr>
+              <th>査定期間
+                <p class="required">必須</p>
+              </th>
+              <td class="nowrap">
+                <span><input type="small-text" placeholder="いつから"></span>
+                <b>&ensp;~&ensp;</b>
+                <span><input type="small-text" placeholder="いつまで"></span>
+                <p>※査定完了日を指定してください。</p>
+              </td>
+            </tr>
+            <tr>
+              <th>種別
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="01-B" name="checkbox01">
+                <label for="01-B" class="checkbox01">商品</label>
+
+                <input type="checkbox" id="02-B" name="checkbox01">
+                <label for="02-B" class="checkbox01">要修理品</label>
+
+                <input type="checkbox" id="03-B" name="checkbox01">
+                <label for="03-B" class="checkbox01">再利用品</label>
+
+                <input type="checkbox" id="04-B" name="checkbox01">
+                <label for="04-B" class="checkbox01">廃棄品</label>
+
+                <input type="checkbox" id="05-B" name="checkbox01">
+                <label for="05-B" class="checkbox01">不良品</label>
+              </td>
+            </tr>
+            <tr>
+              <th>仕入パターン
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="06-B" name="checkbox01">
+                <label for="06-B" class="checkbox01">業者未検品</label>
+
+                <input type="checkbox" id="07-B" name="checkbox01">
+                <label for="07-B" class="checkbox01">業者検品済</label>
+              </td>
+            </tr>
+            <tr>
+              <th>仕入先</th>
+              <td class="nowrap">
+                <ul>
+                  <li>
+                    <select class="date-box">
+                      <option value="">（選択してください）</option>
+                      <option value="">02</option>
+                      <option value="">01</option>
+                      <option value="">その他</option>
+                    </select>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>販売先</th>
+              <td>
+                <ul>
+                  <li>
+                    <select class="date-box">
+                      <option value="">（選択してください）</option>
+                      <option value="">02</option>
+                      <option value="">01</option>
+                      <option value="">その他</option>
+                    </select>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>端末タイプ</th>
+              <td>
+                <ul>
+                  <li>
+                    <select class="date-box">
+                      <option value="">（選択してください）</option>
+                      <option value="">iPhone</option>
+                      <option value="">iPad</option>
+                      <option value="">Androidスマホ</option>
+                      <option value="">Androidタブレット</option>
+                      <option value="">ガラケー</option>
+                      <option value="">その他</option>
+                    </select>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>メーカー</th>
+              <td>
+                <ul>
+                  <li>
+                    <select class="date-box">
+                      <option value="">（選択してください）</option>
+                      <option value="">Apple</option>
+                      <option value="">ソニー</option>
+                      <option value="">シャープ</option>
+                      <option value="">サムスン</option>
+                      <option value="">HUAWEI</option>
+                      <option value="">富士通</option>
+                      <option value="">京セラ</option>
+                      <option value="">その他</option>
+                    </select>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>モデル/型番/規格番号</th>
+              <td><input type="text" name="" value="" placeholder="半角英数字で入力してください。"><br>
+                <p>例）MTM58J/A　SONY051S</p>
+              </td>
+            </tr>
+            <tr>
+              <th>キャリア</th>
+              <td>
+                <ul>
+                  <li>
+                    <select class="date-box">
+                      <option value="">（選択してください）</option>
+                      <option value="">docomo</option>
+                      <option value="">au</option>
+                      <option value="">SoftBank</option>
+                      <option value="">SIMフリー</option>
+                      <option value="">Apple</option>
+                      <option value="">Y!mobile</option>
+                      <option value="">UQmobile</option>
+                      <option value="">その他</option>
+                    </select>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>IMEI/個体識別番号</th>
+              <td><input type="text" name="" value="" placeholder="15ケタの半角英数字で入力してください。"><br>
+              </td>
+            </tr>
+            <tr>
+              <th>アクティベーションロック
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="11-B" name="checkbox01">
+                <label for="11-B" class="checkbox01">OFF</label>
+
+                <input type="checkbox" id="12-B" name="checkbox01">
+                <label for="12-B" class="checkbox01">ONまたはUNKNOWN</label>
+              </td>
+            </tr>
+            <tr>
+              <th>ネットワーク利用制限
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="13-B" name="checkbox01">
+                <label for="13-B" class="checkbox01">-（ハイフン）</label>
+
+                <input type="checkbox" id="14-B" name="checkbox01">
+                <label for="14-B" class="checkbox01">〇</label>
+
+                <input type="checkbox" id="15-B" name="checkbox01">
+                <label for="15-B" class="checkbox01">△</label>
+
+                <input type="checkbox" id="16-B" name="checkbox01">
+                <label for="16-B" class="checkbox01">×</label>
+              </td>
+            </tr>
+            <tr>
+              <th>WEB出品
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="17-B" name="checkbox01">
+                <label for="17-B" class="checkbox01">Ecomo</label>
+                &ensp;
+                <input type="checkbox" id="18-B" name="checkbox01">
+                <label for="18-B" class="checkbox01">eBay</label>
+
+                <input type="checkbox" id="19-B" name="checkbox01">
+                <label for="19-B" class="checkbox01">YS1</label>
+                &ensp;
+                &ensp;
+
+                <input type="checkbox" id="20-B" name="checkbox01">
+                <label for="20-B" class="checkbox01">YS2</label>
+
+                <br>
+                <br>
+                <input type="checkbox" id="21-B" name="checkbox01">
+                <label for="21-B" class="checkbox01">楽天1</label>
+                &ensp;
+                &ensp;
+                <input type="checkbox" id="22-B" name="checkbox01">
+                <label for="22-B" class="checkbox01">楽天2</label>
+
+                <input type="checkbox" id="23-B" name="checkbox01">
+                <label for="23-B" class="checkbox01">楽天3</label>
+                &ensp;
+                <input type="checkbox" id="24-B" name="checkbox01">
+                <label for="24-B" class="checkbox01">Amazon1</label>
+                <br>
+                <br>
+                <input type="checkbox" id="25-B" name="checkbox01">
+                <label for="25-B" class="checkbox01">Amazon2</label>
+
+                <input type="checkbox" id="26-B" name="checkbox01">
+                <label for="26-B" class="checkbox01">Q10</label>
+
+                <input type="checkbox" id="27-B" name="checkbox01">
+                <label for="27-B" class="checkbox01">Wowma</label>
+
+                <input type="checkbox" id="28-B" name="checkbox01">
+                <label for="28-B" class="checkbox01">ムスビー</label>
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <th>業者販売
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="29-B" name="checkbox01">
+                <label for="29-B" class="checkbox01">通常販売</label>
+
+                <input type="checkbox" id="30-B" name="checkbox01">
+                <label for="30-B" class="checkbox01">部品販売</label>
+
+                <input type="checkbox" id="31-B" name="checkbox01">
+                <label for="31-B" class="checkbox01">溶解</label>
+
+                <input type="checkbox" id="32-B" name="checkbox01">
+                <label for="32-B" class="checkbox01">返品</label>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="backpage_btn">
+          <a href="4101.html" class="btn-clear">条件クリア</a>
+        </div>
+        <div class="container-login_btn">
+          <a href="###" class="btn-primary" onclick="showBalloon()">確認用：エラー</a>
+        </div>
+        <div class="nextpage_btn">
+          <a href="#" class="btn-download">ダウンロード</a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

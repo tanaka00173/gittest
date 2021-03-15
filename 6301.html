@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <title>顧客マスタ｜中古モバイル査定システム</title>
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/styleseet.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/table.css">
+
+  <!--link rel="stylesheet" href="css/main.css"-->
+  <script type="text/javascript">
+    function showBalloon() {
+      var wObjballoon = document.getElementById("makeImg");
+      if (wObjballoon.className == "balloon-none") {
+        wObjballoon.className = "balloon";
+      } else {
+        wObjballoon.className = "balloon-none";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function checkForm($this) {
+      var str = $this.value;
+      while (str.match(/[^A-Z^a-z\d\-]/)) {
+        str = str.replace(/[^A-Z^a-z\d\-]/, "");
+      }
+      $this.value = str;
+    }
+  </script>
+
+</head>
+<body>
+  <header class="header-main">
+    <a href="2001.html" class="header-logo">
+      中古モバイル査定システム
+    </a>
+    <nav role="navigation">
+      <ul class="header-menu">
+        <li>
+          <a href="###">
+            田中優衣さん　こんにちは！<span>ユーザーコード：600020</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a class="logout" href="index.html"><i class="fas fa-sign-out-alt"></i>ログアウト</a>
+  </header>
+  <section class="container-main">
+    <aside class="sidebar-main">
+      <ul>
+        <li><a href="2001.html">ダッシュボード</a></li>
+        <li><a href="3001.html">買取査定</a></li>
+        <li><a href="4001.html">査定データ</a></li>
+        <li><a href="5001.html">FAQ</a></li>
+        <li><a class="pickup" href="6001.html">マスタ管理</a></li><br><br>
+        <div class="qr-appli">
+          <li class="appli">検査/データ消去アプリ</li>
+          <li class="appli">https://qwertyuiop.jp/</li>
+          <li class="appli"><img src="images/qrcode.png" alt=""></li>
+        </div>
+      </ul>
+      <footer class="footer-main">
+        <p>©株式会社クリエージェンシー</p>
+      </footer>
+    </aside>
+
+    <div class="contents">
+
+      <div class="balloon-none" id="makeImg">
+        <div class="error">
+          <p>未入力の項目があります。</p>
+        </div>
+      </div>
+
+      <h1>
+        顧客マスタ
+      </h1>
+      <ul class="contents-breadcrumb">
+        <li>
+          <a href="2001.html">
+            <i class="fas fa-home"></i>
+            HOME&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="6001.html">
+            <i class="fas fa-chevron-right"></i>
+            マスタ管理&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="6301.html">
+            <i class="fas fa-chevron-right"></i>
+            顧客マスタ&ensp;
+          </a>
+        </li>
+      </ul>
+      <div class="container">
+        <h1>登録件数</h1>
+        <div class="container-table">
+          <table class="table-list">
+            <tr>
+              <th>法人分類</th>
+              <th>リユース</th>
+              <th>修理</th>
+              <th>量販店</th>
+              <th>モバイルショップ</th>
+              <th>廃棄</th>
+              <th>その他</th>
+              <th>合計</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td data-label="法人分類">登録件数</td>
+                <td data-label="リユース">58</td>
+                <td data-label="修理">22</td>
+                <td data-label="量販店">5</td>
+                <td data-label="モバイルショップ">5</td>
+                <td data-label="廃棄">2</td>
+                <td data-label="その他">5</td>
+                <td data-label="合計">97</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="blank"></div>
+        <h1>検索条件</h1>
+        <div class="container-table">
+
+          <table class="table-download">
+            <!--table-basic-->
+            <tr>
+              <th>法人分類
+                <p class="multiple">複数可</p>
+              </th>
+              <td>
+                <input type="checkbox" id="01-B" name="checkbox01">
+                <label for="01-B" class="checkbox01">リユース</label>
+
+                <input type="checkbox" id="02-B" name="checkbox01">
+                <label for="02-B" class="checkbox01">修理</label>
+                <input type="checkbox" id="03-B" name="checkbox01">
+                <label for="03-B" class="checkbox01">量販店</label>
+                <input type="checkbox" id="04-B" name="checkbox01">
+                <label for="04-B" class="checkbox01">モバイルショップ</label>
+                <input type="checkbox" id="05-B" name="checkbox01">
+                <label for="05-B" class="checkbox01">廃棄</label>
+                <input type="checkbox" id="06-B" name="checkbox01">
+                <label for="06-B" class="checkbox01">その他</label>
+              </td>
+            </tr>
+            <tr>
+              <th>外装評価
+              </th>
+              <td class="nowrap">
+                <input type="text" placeholder="フリーワード入力">
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="container-login_btn">
+          <a href="###" class="btn-primary" onclick="showBalloon()">確認用：エラー</a>
+        </div>
+        <div class="nextpage_btn">
+          <a href="6302.html" class="btn-download">検索</a>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

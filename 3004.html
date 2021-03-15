@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <title>機能評価｜中古モバイル査定システム</title>
+  <link rel="stylesheet" href="css/reset.min.css">
+  <link rel="stylesheet" href="css/styleseet.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/table.css">
+  <script type="text/javascript">
+    function showBalloon() {
+      var wObjballoon = document.getElementById("makeImg");
+      if (wObjballoon.className == "balloon-none") {
+        wObjballoon.className = "balloon";
+      } else {
+        wObjballoon.className = "balloon-none";
+      }
+    }
+  </script>
+  <script type="text/javascript">
+    function checkForm($this) {
+      var str = $this.value;
+      while (str.match(/[^A-Z^a-z\d\-]/)) {
+        str = str.replace(/[^A-Z^a-z\d\-]/, "");
+      }
+      $this.value = str;
+    }
+  </script>
+</head>
+<body>
+  <header class="header-main">
+    <a href="2001.html" class="header-logo">
+      中古モバイル査定システム
+    </a>
+    <nav role="navigation">
+      <ul class="header-menu">
+        <li>
+          <a href="###">
+            田中優衣さん　こんにちは！<span>ユーザーコード：600020</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <a class="logout" href="index.html"><i class="fas fa-sign-out-alt"></i>ログアウト</a>
+  </header>
+
+  <section class="container-main">
+
+    <aside class="sidebar-main">
+      <ul>
+        <li><a href="2001.html">ダッシュボード</a></li>
+        <li><a class="pickup" href="3001.html">買取査定</a></li>
+        <li><a href="4001.html">査定データ</a></li>
+        <li><a href="5001.html">FAQ</a></li>
+        <li><a href="6001.html">マスタ管理</a></li><br><br>
+        <div class="qr-appli">
+          <li class="appli">検査/データ消去アプリ</li>
+          <li class="appli">https://qwertyuiop.jp/</li>
+          <li class="appli"><img src="images/qrcode.png" alt=""></li>
+        </div>
+      </ul>
+
+      <footer class="footer-main">
+        <p>©株式会社クリエージェンシー</p>
+      </footer>
+    </aside>
+
+    <div class="contents">
+
+      <div class="balloon-none" id="makeImg">
+        <div class="error">
+          <p>未入力/未選択の項目があります。</p>
+        </div>
+      </div>
+
+      <h1>
+        機能評価
+      </h1>
+      <ul class="contents-breadcrumb">
+        <li>
+          <a href="2001.html">
+            <i class="fas fa-home"></i>
+            HOME&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3001.html">
+            <i class="fas fa-chevron-right"></i>
+            買取査定&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3002.html">
+            <i class="fas fa-chevron-right"></i>
+            端末情報&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3003.html">
+            <i class="fas fa-chevron-right"></i>
+            安心安全評価&ensp;
+          </a>
+        </li>
+        <li>
+          <a href="3004.html">
+            <i class="fas fa-chevron-right"></i>
+            機能評価&ensp;
+          </a>
+        </li>
+      </ul>
+      <div class="container">
+        <h1>機能評価</h1>
+
+        <div class="container-table">
+          <table class="table-result">
+            <tr>
+              <th rowspan="13">機能評価</th>
+              <td class="middle">検査アプリダウンロード</td>
+              <td>
+                <p>サイドバーにある「検査/データ消去アプリ」を査定する端末で読み込んでください。</p>
+                <p>QRコードを読み込めないときはURLを手入力してください。</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">Wi-Fi</td>
+              <td>
+                <label><input type="radio" name="wi-fi_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="wi-fi_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">Bluetooth</td>
+              <td>
+                <label><input type="radio" name="blue_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="blue_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">センサー機能　ジャイロ</td>
+              <td>
+                <label><input type="radio" name="gyro_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="gyro_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">センサー機能　ジャイロ磁気</td>
+              <td>
+                <label><input type="radio" name="magnetic_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="magnetic_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">センサー機能　接近</td>
+              <td>
+                <label><input type="radio" name="approaching_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="approaching_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">センサー機能　彩度</td>
+              <td>
+                <label><input type="radio" name="saturation_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="saturation_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">バイブ機能</td>
+              <td>
+                <label><input type="radio" name="vibe_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="vibe_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">マイク機能</td>
+              <td>
+                <label><input type="radio" name="mic_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="mic_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">スピーカー機能</td>
+              <td>
+                <label><input type="radio" name="speaker_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="speaker_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">タッチパネル</td>
+              <td>
+                <label><input type="radio" name="panel_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="panel_result" value="">NG</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">ドット抜け</td>
+              <td>
+                <label><input type="radio" name="dot_result" value="">OK/1点</label>
+                &ensp;&ensp;&ensp;&ensp;&ensp;
+                <label><input type="radio" name="dot_result" value="">NG/2点以上</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="middle">カメラ機能</td>
+              <td>
+                <label><input type="radio" name="camera_result" value="">OK/機能なし</label>&ensp;
+                <label><input type="radio" name="camera_result" value="">NG</label>
+              </td>
+            </tr>
+
+          </table>
+        </div>
+        <div class="backpage_btn">
+          <a href="3003.html" class="btn-back">戻る</a>
+        </div>
+
+        <div class="container-login_btn">
+          <a href="###" class="btn-primary" onclick="showBalloon()">確認用：エラー</a>
+        </div>
+
+        <div class="nextpage_btn">
+          <a href="3005.html" class="btn-next">次へ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
