@@ -425,6 +425,23 @@
   }
 
 }
+/*nextline-table  5001.html
+.nextline-table {
+  //column-count: 2;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 300px;
+
+}
+*/
+
+.two {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 550px;
+}
 
 /*ネットワーク利用制限チェック*/
 
