@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.table-list img {
+  width: 40px;
+}
+
 .table-list tr td {
   border: solid 1px black;
   padding: 10px;
